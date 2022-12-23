@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    background-color: $color-bg-primary;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    &__logo {
+        width: 155px;
+    }
+    &__nav-links-container {
+        list-style: none;
+        display: flex;
+        
+    }
+    &__nav-link {
+        padding: 5px;
+    }
+}
+.user-navbar {
+    display: flex;
+    
+}
+.user-avatar-container {
+    &__user-avatar {
+        width: 30px;
+        margin: 0 5px;
+    }
+}
+.fa-cart-shopping {
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+@media screen and (max-) {
+    
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 *,
 *::before,
 *::after {
@@ -8,4 +9,45 @@
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  width: 100%;
+  background-color: #144272;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+}
+.navbar__logo {
+  width: 155px;
+}
+.navbar__nav-links-container {
+  list-style: none;
+  display: flex;
+}
+.navbar__nav-link {
+  padding: 5px;
+}
+
+.user-navbar {
+  display: flex;
+}
+
+.user-avatar-container__user-avatar {
+  width: 30px;
+  margin: 0 5px;
+}
+
+.fa-cart-shopping {
+  font-size: 30px;
+  margin: 0 5px;
 }/*# sourceMappingURL=main.css.map */
