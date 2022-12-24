@@ -100,10 +100,25 @@
     }
     &__nav-link {
         color: $color-text-ligth;
+        
+        transition: .5s ease-in-out;
+        position: relative;
+
+        &::after {
+            content: "";
+        position: absolute;
+        background-color: #F3EFE0;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -2px;
+        transition: 0.3s ease-in-out;
     }
-
+        &:hover::after {
+            width: 100%;
+        }
 }
-
+}
 .user-navbar {
     
     margin-left: auto;
@@ -115,10 +130,6 @@
     &__user-avatar {
             width: 30px;
             height: 30px;
-    }
-    &__cart-icon-container {
-        
-        
     }
     .fa-cart-shopping{
         font-size: 20px;
