@@ -1,4 +1,8 @@
+body {
+    background-color: rgba(128, 128, 128, 0.226);
+}
 .section-cards {
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
     &__header {
@@ -14,10 +18,11 @@
         padding: 1rem;
         background-color: cornflowerblue;
     }
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
 }
 .product-search {
     background-color: white;

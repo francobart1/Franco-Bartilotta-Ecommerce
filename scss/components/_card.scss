@@ -1,14 +1,23 @@
 
 .card {
-    margin: 1rem;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: .5s ease-in-out;
+    background-color: white;
+    &:hover {
+        box-shadow: 3px 3px 60px rgba(13, 13, 14, 0.253);
+    }
     &__header {
-        height: 120px;
-        background-color: orange;
+        width: 100%;
+        height: 350px;
     }
 
     &__img {
-        height: 120px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__body {
@@ -18,7 +27,6 @@
     &__title {
         font-weight: 500;
         font-size: 1.5rem;
-        border-bottom: 2px solid orangered;
     }
 
     &__description {
@@ -33,18 +41,28 @@
 
     &__footer {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         padding: 1rem;
     }
 
     &__date {
-        color: dodgerblue;
+        color: $color-bg-secondary;
     }
 
     
     &__btn {
-        padding: 1rem 1.5rem;
-        background-color: dodgerblue;
+        font-size: 12px;
+        padding: .5rem .5rem;
+        border-radius: 15px;
+        background-color: $color-bg-secondary;
         color: white;
+        transition: .5s ease-in-out;
+        &:hover {
+            color: $color-bg-secondary;
+            background-color: white;
+            font-weight: 600;
+            font-size: 13px;
+        }
     }
 }
