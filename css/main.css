@@ -230,6 +230,7 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #222;
 }
 .footer__column {
@@ -237,6 +238,7 @@ body {
 }
 .footer__contact-item {
   list-style: none;
+  padding: 10px 0;
 }
 .footer__contact-link {
   color: white;
@@ -246,21 +248,48 @@ body {
   gap: 0.5rem;
 }
 .footer__contact-icon {
-  font-size: 1.75rem;
+  font-size: 30px;
 }
 .footer__contact-icon--facebook {
   color: #38529a;
 }
 .footer__contact-icon--instagram {
-  color: #f14d59;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  vertical-align: middle;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
 .footer__contact-icon--linkedin {
   color: #0077b6;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 600px) {
   .footer {
     flex-direction: row;
+    justify-content: space-around;
+    min-height: 200px;
+  }
+  .footer__contact-icon {
+    font-size: 30px;
+  }
+  .footer__logo {
+    width: 100px;
+    height: 100px;
   }
 }
 .main {
@@ -292,6 +321,7 @@ body {
 }
 
 .cards-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 18px;
@@ -329,5 +359,9 @@ body {
 @media screen and (min-width: 1000px) {
   .section-cards__header {
     display: flex;
+  }
+  .cards-container {
+    padding: 50px 0;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=main.css.map */
