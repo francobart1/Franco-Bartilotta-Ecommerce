@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Acerca de Nosotros</title>
 </head>
 <body>
-    <h1>
-        Acerca de nosotros
-    </h1>
+        <header class="header">
+            <nav class="navbar">
+                <a href="/index.html" class="navbar__nav-link">
+                    <img class="navbar__logo" src="/assets/images/logo-smartphone.svg.png" alt="Logo del ecommerce">
+                </a>
+                <div class="user-navbar">
+                    <div class="user-navbar__cart-icon-container">
+                        <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                    <div class="user-navbar__user-avatar-container">
+                        <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/50px-Default_pfp.svg.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
+                        </a>
+                    </div>
+                    <!-- TODO: avatar de la persona logueada o nombre -->
+                </div>
+                
+                <input type="checkbox" class="navbar__menu-btn" id="menu-btn">
+    
+                <label for="menu-btn" class="navbar__menu-label">
+                    <span class="navbar__menu-icon"></span>
+                </label>
+    
+    
+                <ul class="navbar__nav-links-container">
+                    <li class="navbar__nav-item">
+                        <a href="/index.html" class="navbar__nav-link">Inicio</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/register/register.html" class="navbar__nav-link">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 </body>
 </html>
