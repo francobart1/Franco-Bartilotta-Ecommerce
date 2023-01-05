@@ -21,7 +21,12 @@
     }
 
     &__body {
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        justify-content: end;
     }
 
     &__title {
@@ -30,11 +35,15 @@
     }
 
     &__description {
+        display: flex;
+        flex-direction: row;
         padding: 1rem 1rem;
         font-family: 'Roboto', sans-serif;
         text-align: start;
     }
     &__price {
+        display: flex;
+        justify-content: center;
         font-weight: 500;
         font-size: 1.5rem;
         color: $color-bg-primary;
@@ -42,7 +51,8 @@
 
     &__footer {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        flex-grow: 1;
         justify-content: space-between;
         padding: 1rem;
     }
