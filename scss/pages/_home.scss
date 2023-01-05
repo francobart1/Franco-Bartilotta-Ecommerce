@@ -32,8 +32,9 @@ body {
         font-size: 15px;
     }
     &__category {
+        font-family: 'Roboto', sans-serif;
         color: rgb(61, 60, 60);
-        
+        display: flex;
     }
 }
 .cards-container {

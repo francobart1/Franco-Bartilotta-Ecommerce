@@ -11,7 +11,7 @@
     }
     &__header {
         width: 100%;
-        height: 350px;
+        height: 400px;
     }
 
     &__img {
@@ -30,7 +30,9 @@
     }
 
     &__description {
-        padding: 1.5rem 0 2rem;
+        padding: 1rem 1rem;
+        font-family: 'Roboto', sans-serif;
+        text-align: start;
     }
     &__price {
         font-weight: 500;
