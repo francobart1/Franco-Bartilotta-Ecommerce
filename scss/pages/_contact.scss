@@ -152,7 +152,7 @@
         order: 3;
     }
 }
-.main {
+.main-contact {
     margin: 50px 15px;
     padding: 1.5rem 0;
     display: flex;
@@ -172,7 +172,7 @@ textarea {
     border: none;
     padding: 5px;
 }
-label {
+.label-container {
     display: flex;
     padding: 5px;
     font-size: 12px;
@@ -207,7 +207,7 @@ label {
         cursor: pointer;
         }
     }
-form {
+.form-contact {
     margin: 0 15px;
 }
 .container-iframe {
@@ -218,7 +218,7 @@ iframe {
     border-radius: 10px;
 }
 @media screen and(min-width: 1000px) {
-    .main:not(h1) {
+    .main-contact:not(h1) {
         display: flex;
         flex-direction: row;
     }

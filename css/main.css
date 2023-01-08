@@ -816,7 +816,7 @@ body {
     order: 3;
   }
 }
-.main {
+.main-contact {
   margin: 50px 15px;
   padding: 1.5rem 0;
   display: flex;
@@ -839,7 +839,7 @@ textarea {
   padding: 5px;
 }
 
-label {
+.label-container {
   display: flex;
   padding: 5px;
   font-size: 12px;
@@ -877,7 +877,7 @@ label {
   cursor: pointer;
 }
 
-form {
+.form-contact {
   margin: 0 15px;
 }
 
@@ -891,7 +891,7 @@ iframe {
 }
 
 @media screen and (min-width: 1000px) {
-  .main:not(h1) {
+  .main-contact:not(h1) {
     display: flex;
     flex-direction: row;
   }
@@ -960,4 +960,102 @@ iframe {
     width: 100px;
     height: 100px;
   }
+}
+.titulo-form {
+  text-shadow: 1px 1px 10px gray;
+  text-align: center;
+  margin-top: 10px;
+  padding: 15px;
+  color: #3887db;
+}
+
+.main {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formRegistroUsuario {
+  width: auto;
+  margin: 20px;
+}
+
+.form-container {
+  width: 100%;
+  box-shadow: 1px 1px 5px gray;
+  background-color: #FFC93C;
+  border-radius: 10px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.form-container:hover {
+  transform: scale(1.05);
+  border: 3px solid #5BC0F8;
+  box-shadow: none;
+}
+
+.formUsuario, .formUsuarioPais, .terminos, .botonEnviar {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+.label {
+  display: flex;
+  color: white;
+  text-shadow: 1px 2px 30px black;
+}
+
+.terms {
+  color: white;
+  text-shadow: 1px 2px 30px black;
+}
+
+.genero {
+  padding: 0 10px;
+}
+
+.gen-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio {
+  margin: 0 5px;
+}
+
+.input, #country {
+  box-shadow: 1px 1px 10px gray;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  border: none;
+}
+
+.botonEnviar {
+  width: 100%;
+  height: 40px;
+}
+
+.btn-form {
+  border: none;
+  color: #0081C9;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 75px;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  color: white;
+  background-color: #0081C9;
 }/*# sourceMappingURL=main.css.map */
