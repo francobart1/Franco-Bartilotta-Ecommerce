@@ -1,5 +1,7 @@
 
 .card {
+    height: 700px;
+    width: 330px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -10,12 +12,14 @@
         box-shadow: 3px 3px 60px rgba(13, 13, 14, 0.253);
     }
     &__header {
-        width: 100%;
-        height: 400px;
+        display: flex;
+    width: 329px;
+    height: 400px;
+    align-items: center;
     }
 
     &__img {
-        width: 100%;
+        width: 330px;
         height: 100%;
         object-fit: cover;
     }
