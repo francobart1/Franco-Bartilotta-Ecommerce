@@ -32,6 +32,8 @@ body {
         font-size: 15px;
     }
     &__category {
+        margin: 20px 0;
+        font-size: 35px;
         font-family: 'Roboto', sans-serif;
         color: rgb(61, 60, 60);
         display: flex;
@@ -41,8 +43,9 @@ body {
     padding: 10px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr,));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr,));
+    justify-items: center;
+    gap: 20px;
 }
 .product-search {
     background-color: white;
