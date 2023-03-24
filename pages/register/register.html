@@ -55,7 +55,7 @@
         <main class="main">
     <h1 class="titulo-form">REGISTRO DE USUARIO</h1>
     <section class="formRegistroUsuario">  
-        <form class="form-container">
+        <form id="registerForm" class="form-container">
             <div class="formUsuario">
                 <label for="idInputName"class="label">Nombre Completo</label> 
                 <input type="text" name="fullName" placeholder="Jose Perez" class="input" required minlength="8" maxlength="20" autofocus>
@@ -68,12 +68,12 @@
 
             <div class="formUsuario">
                 <label for="passInput" class="label">Contraseña</label> 
-                <input type="password" required minlength="8" maxlength="20" class="input" name="contraseña">
+                <input type="password"  required minlength="8" maxlength="20" class="input" id="password" name="password">
             </div>
 
             <div class="formUsuario">
                 <label for="repeatPassInput" class="label">Repetir contraseña</label> 
-                <input type="password" required minlength="8" maxlength="20" class="input" name="contraseña">
+                <input type="password" required minlength="8" maxlength="20" class="input" id="password2" name="password2">
             </div>
 
             <div class="formUsuario">
@@ -83,7 +83,7 @@
 
             <div class="formUsuario">
                 <label for="bornDateInput" class="label">Fecha Nacimiento</label> 
-                <input type="date" name="bornDate"  min="2007-01-01" class="input" >
+                <input type="date" name="bornDate"  min="1920-01-01" class="input" >
             </div>
 
             <div class="formUsuarioPais">
@@ -344,9 +344,9 @@
             <div class="formUsuario">
                 <label for="sexInput" class="label">Sexo</label>
                 <div class="gen-container">
-                <label class="label genero"><input class="radio" type="radio" name="gender"value="female">Femenino</label>
-                <label class="label genero"><input class="radio" type="radio" name="gender"value="male">Masculino</label>
-                <label class="label genero"><input class="radio" type="radio" name="gender"value="otro">Otro</label>
+                <label class="label genero"><input class="radio" id="female" type="radio" name="gender"value="female">Femenino</label>
+                <label class="label genero"><input  id="male" class="radio" type="radio" name="gender"value="male">Masculino</label>
+                <label class="label genero"><input id="otro"  class="radio" type="radio" name="gender"value="otro">Otro</label>
                 </div>
             </div>
 
@@ -355,7 +355,7 @@
                     <input type="checkbox" name="terminosYCondiciones" valu="terminos"> <span class="terms">Acepto los términos y condiciones</span>
             </div>
 
-            <div class="botonEnviar">
+            <div id="registerSubmit" class="botonEnviar">
                 <button class="btn-form" type="submit">Enviar</button>
             </div>
 
@@ -428,5 +428,6 @@
                 </ul>
             </div>
         </footer>
+        <script src="/js/register.js"></script>
 </body>
 </html>
