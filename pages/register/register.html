@@ -55,39 +55,39 @@
         <main class="main">
     <h1 class="titulo-form">REGISTRO DE USUARIO</h1>
     <section class="formRegistroUsuario">  
-        <form id="registerForm" class="form-container">
-            <div class="formUsuario">
-                <label for="idInputName"class="label">Nombre Completo</label> 
+        <form id="registerForm" class="form">
+            <div class="form__usuario">
+                <label for="idInputName"class="form__usuario__label">Nombre Completo</label> 
                 <input type="text" name="fullName" placeholder="Jose Perez" class="input" required minlength="8" maxlength="20" autofocus>
             </div>
 
-            <div class="formUsuario">
-                <label for="emailInput" class="label">Email</label> 
+            <div class="form__usuario">
+                <label for="emailInput" class="form__usuario__label">Email</label> 
                 <input type="email" name="email" class="input" placeholder="example@email.com" required minlength="8" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             </div>
 
-            <div class="formUsuario">
-                <label for="passInput" class="label">Contraseña</label> 
+            <div class="form__usuario">
+                <label for="passInput" class="form__usuario__label">Contraseña</label> 
                 <input type="password"  required minlength="8" maxlength="20" class="input" id="password" name="password">
             </div>
 
-            <div class="formUsuario">
-                <label for="repeatPassInput" class="label">Repetir contraseña</label> 
+            <div class="form__usuario">
+                <label for="repeatPassInput" class="form__usuario__label">Repetir contraseña</label> 
                 <input type="password" required minlength="8" maxlength="20" class="input" id="password2" name="password2">
             </div>
 
-            <div class="formUsuario">
-                <label for="ageInput" class="label">Edad</label> 
+            <div class="form__usuario">
+                <label for="ageInput" class="form__usuario__label">Edad</label> 
                 <input type="number" name="age" id="ageInput" min="16" max="99" class="input">
             </div>
 
-            <div class="formUsuario">
-                <label for="bornDateInput" class="label">Fecha Nacimiento</label> 
+            <div class="form__usuario">
+                <label for="bornDateInput" class="form__usuario__label">Fecha Nacimiento</label> 
                 <input type="date" name="bornDate"  min="1920-01-01" class="input" >
             </div>
 
-            <div class="formUsuarioPais">
-                <label for="country" class="label">Pais de Nacimiento</label> 
+            <div class="form__usuario">
+                <label for="country" class="form__usuario__label">Pais de Nacimiento</label> 
                 <select name="country" id="country">
                     <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
@@ -341,12 +341,12 @@
                 </select>
             </div>
 
-            <div class="formUsuario">
-                <label for="sexInput" class="label">Sexo</label>
+            <div class="form__usuario">
+                <label for="sexInput" class="form__usuario__label">Sexo</label>
                 <div class="gen-container">
-                <label class="label genero"><input class="radio" id="female" type="radio" name="gender"value="female">Femenino</label>
-                <label class="label genero"><input  id="male" class="radio" type="radio" name="gender"value="male">Masculino</label>
-                <label class="label genero"><input id="otro"  class="radio" type="radio" name="gender"value="otro">Otro</label>
+                <label class="form__usuario__label__genero"><input class="radio" id="female" type="radio" name="gender"value="female">Femenino</label>
+                <label class="form__usuario__label__genero"><input  id="male" class="radio" type="radio" name="gender"value="male">Masculino</label>
+                <label class="form__usuario__label__genero"><input id="otro"  class="radio" type="radio" name="gender"value="otro">Otro</label>
                 </div>
             </div>
 

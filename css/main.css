@@ -889,7 +889,7 @@ iframe {
   margin: 20px;
 }
 
-.form-container {
+.form {
   width: 100%;
   box-shadow: 1px 1px 5px gray;
   background-color: #e6ac1a;
@@ -901,28 +901,30 @@ iframe {
   justify-content: center;
   transition: 0.7s ease-in-out;
 }
-
-.form-container:hover {
+.form__:hover {
   border: 4px solid #5BC0F8;
 }
-
-.formUsuario, .formUsuarioPais, .terminos, .botonEnviar {
+.form__usuario {
   width: 100%;
   padding: 5px 15px;
 }
-
-.label {
+.form__usuario__label {
   padding-bottom: 4px;
   display: flex;
   color: white;
 }
-
-.terms {
+.form__usuario__label__genero {
+  padding: 0 10px;
   color: white;
 }
 
-.genero {
-  padding: 0 10px;
+.terminos, .botonEnviar {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+.terms {
+  color: white;
 }
 
 .gen-container {
