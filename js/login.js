@@ -17,14 +17,17 @@ loginForm.addEventListener('submit', (event) =>{
     })
 
     if(!user || user.password !== password.value) {
-        alert('Datos ingresados no son correctos');
+        showAlert('Datos ingresados no son correctos');
         return;
     }
 
         localStorage.setItem('currentUser', JSON.stringify(user));
-        alert('Login correcto')
+        //insertar alerta custom
+        showAlert('Login correcto te redireccionaremos en unos instantes...')
     
-    
+        setTimeout(() => {
+            window.location.href = '/index.html';
+        }, 1500)
 
     
 

@@ -12,6 +12,57 @@
     
     </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="navbar__nav-link">
+                <img class="navbar__logo" src="/assets/images/logo-smartphone.svg.png" alt="Logo del ecommerce">
+            </a>
+            <div class="user-navbar">
+                <div class="product-search-header">
+                    <input type="text" class="product-search__input" placeholder="Buscar...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="user-navbar__cart-icon-container">
+                    <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="user-navbar__user-avatar-container">
+                    <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/50px-Default_pfp.svg.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
+                    </a>
+                </div>
+                <!-- TODO: avatar de la persona logueada o nombre -->
+            </div>
+            
+            <input type="checkbox" class="navbar__menu-btn" id="menu-btn">
+
+            <label for="menu-btn" class="navbar__menu-label">
+                <span class="navbar__menu-icon"></span>
+            </label>
+
+
+            <ul class="navbar__nav-links-container">
+                <li class="navbar__nav-item">
+                    <a href="/index.html" class="navbar__nav-link">Inicio</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/register/register.html" class="navbar__nav-link">Registro</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/login/login.html" id="sign-in" class="navbar__nav-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
     <div class="container">
         <h1>LOGIN</h1>
         <form id="loginForm" class="login-form">
@@ -27,6 +78,8 @@
             <button type="submit" class="btn">Ingresar</button>
         </form>
     </div>
+    <script src="/js/alert.js"></script>
     <script src="/js/login.js"></script>
+    
 </body>
 </html>

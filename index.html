@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="user-navbar__user-avatar-container">
-                    <a href="/pages/login/login.html">
+                    <a href="#">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/50px-Default_pfp.svg.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
                     </a>
                 </div>
@@ -55,6 +55,9 @@
                 </li>
                 <li class="navbar__nav-item">
                     <a href="/pages/register/register.html" class="navbar__nav-link">Registro</a>
+                </li>
+                <li class="navbar__nav-item" id="sign-in">
+                    <a href="/pages/login/login.html"  class="navbar__nav-link">Login</a>
                 </li>
             </ul>
         </nav>
@@ -87,7 +90,7 @@
             <h1 class="section-cards__category">
                 OFERTAS
             </h1>
-            <div class="cards-container">
+            <div class="cards-container" id="card-container">
                 <article class="card">
                     <div class="card__header">
                         <img src="/assets/images/s22.png" alt="Product Image" class="card__img">
@@ -510,6 +513,8 @@
             </ul>
         </div>
     </footer>
+    <script src="/js/index.js"></script>
+    <script src="/js/header.js"></script>
     
 </body>
 </html>

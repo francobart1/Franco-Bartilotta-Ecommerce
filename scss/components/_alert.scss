@@ -4,13 +4,19 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: $color-bg-primary;
-    padding: 2rem;
-    color: white;
+    padding: 2rem 3rem;
     font-size: 1.25rem;
+    color: white;
     text-align: center;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 0 10px black;
-}
+    visibility: hidden;
+    opacity: 0;
+    transition:  visibility linear 0.5s, opacity 0.5s linear;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+} 
 
 .hidden {
     display: none;
