@@ -1,5 +1,5 @@
 
-const badgeHTML = document.getElementById('cart-icon')
+const badgeHTML = document.getElementById('cart-count')
 let order = {
     products: [
         {

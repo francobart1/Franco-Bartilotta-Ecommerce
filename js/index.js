@@ -1,15 +1,16 @@
 const user = JSON.parse(localStorage.getItem('currentUser'));
-const cardContainer = document.querySelector('#card-caontainer');
+const cardContainer = document.querySelector('#card-container');
 
 const productsLS = JSON.parse(localStorage.getItem('products')) || [];
 
-function renderProducts(products) {
-    products.forEach((product, index) => {
+function renderizarProductos(products) {
+    products.forEach(product => {
         cardContainer.innerHTML = '';
         const card = document.createElement('article');
         card.classList.add('card');
+
         card.innerHTML = `<div class="card__header">
-        <img src="${product.image}" alt="${product.image}"  class="card__img">
+        <img src="${product.image}" alt="${product.name}"  class="card__img">
     </div>
     <div class="card__body">
         <div class="card__title">
@@ -23,14 +24,14 @@ function renderProducts(products) {
         </div>
     </div>
     <div class="card__footer">
-        <button class="card__btn-container" onclick"addToOrder(${index})" $(user)
+        <button class="card__btn-container" onclick="addToOrder(${index})" ${user ? "" : "disabled"} >
         comprar
         </button>
         <div class="card__date">
         ${product.date}
         </div>
         <div class="card__btn-container">
-            <a id=${index} class="card__btn" href="/pages/product-detail/product-detail.html">
+            <a class="card__btn" href="/pages/product-detail/product-detail.html?id=${index}">
                 Detalle
             </a>
         </div>
@@ -41,4 +42,4 @@ function renderProducts(products) {
     })
 }
 
-renderProducts(productsLS);
+renderizarProductos(productsLS);

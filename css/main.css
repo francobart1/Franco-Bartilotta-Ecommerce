@@ -257,11 +257,15 @@ body {
 }
 .user-navbar__cart-badge {
   position: absolute;
-  top: -8;
-  right: -8;
+  top: -3px;
+  right: -8px;
   height: 16px;
   width: 16px;
   border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
 }
 .user-navbar .fa-cart-shopping {
   font-size: 20px;
@@ -1002,4 +1006,48 @@ iframe {
 .btn-form:hover {
   color: white;
   background-color: #0081C9;
+}
+
+.login-container {
+  margin: 60px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container__title-login {
+  padding: 20px;
+  font-size: 30px;
+  color: #3887db;
+}
+.login-container__login-form {
+  box-shadow: 1px 1px 5px gray;
+  background-color: #e6ac1a;
+  border-radius: 10px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out;
+}
+.login-container__input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 15px;
+}
+.login-container__btn-login {
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1px 1px 5px gray;
+  background-color: #3887db;
+  color: white;
+  cursor: pointer;
+}
+.login-container__btn-login__:hover {
+  background-color: white;
+  color: #3887db;
 }/*# sourceMappingURL=main.css.map */

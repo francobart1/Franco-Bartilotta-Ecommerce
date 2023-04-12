@@ -11,8 +11,10 @@ function renderHeaderLinks () {
 
 if(currentUser) {
     signIn.innerHTML = `<div onclick='logout()' class="navbar__nav-link">Logout</div>`
+
     const adminProductLink = createLinkElement('admin-product','Admin Product');
-    const adminUserLink = createLinkElement('adminUser', 'Admin User');
+
+    const adminUserLink = createLinkElement('admin-user', 'Admin User');
     
     
     navbarList.appendChild(adminProductLink)
@@ -35,12 +37,13 @@ if(currentUser) {
 }
 
 }
-function  createListItemElement(path, text, type = null) {
+function  createListItemElement(path, text) {
     const listItem = document.createElement('li');
     listItem.classList.add('navbar__nav-item');
     listItem.setAttribute('id',)
     link = createLinkElement(path, text);
     listItem.setAttribute('id', path);
+
     listItem.appendChild(link);
     return listItem;
 }
@@ -60,10 +63,8 @@ function  createLinkElement(path, text) {
 }
 
 function logout() {
-    const currentUser = 
-    //agregar jason para guardar
-    //hacer variable currentuser
-    localStorage.getItem('currentUser');
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
     if(currentUser.role === 'ADMIN_ROLE') {
         document.getElementById('admin-product').remove();
         document.getElementById('user-product').remove();
