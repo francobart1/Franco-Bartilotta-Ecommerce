@@ -120,6 +120,10 @@ body {
   transition: visibility linear 0.5s, opacity 0.5s linear;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+.alert-dialog.show {
+  visibility: visible;
+  opacity: 1;
+}
 
 .hidden {
   display: none;
@@ -244,6 +248,20 @@ body {
 .user-navbar__user-avatar {
   width: 30px;
   height: 30px;
+}
+.user-navbar__cart-icon-container {
+  color: orange;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  position: relative;
+}
+.user-navbar__cart-badge {
+  position: absolute;
+  top: -8;
+  right: -8;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
 }
 .user-navbar .fa-cart-shopping {
   font-size: 20px;

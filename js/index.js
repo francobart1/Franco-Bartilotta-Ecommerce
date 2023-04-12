@@ -1,3 +1,4 @@
+const user = JSON.parse(localStorage.getItem('currentUser'));
 const cardContainer = document.querySelector('#card-caontainer');
 
 const productsLS = JSON.parse(localStorage.getItem('products')) || [];
@@ -22,12 +23,15 @@ function renderProducts(products) {
         </div>
     </div>
     <div class="card__footer">
+        <button class="card__btn-container" onclick"addToOrder(${index})" $(user)
+        comprar
+        </button>
         <div class="card__date">
         ${product.date}
         </div>
         <div class="card__btn-container">
             <a id=${index} class="card__btn" href="/pages/product-detail/product-detail.html">
-                Comprar
+                Detalle
             </a>
         </div>
     </div>`

@@ -76,7 +76,8 @@ console.log('sigue')
         email: el.email.value,
         password: el.password.value,
         gender: el.gender.value,
-        age: el.age.value
+        age: el.age.value,
+        role: 'USER_ROLE'
     }
 
     users.push(user)
