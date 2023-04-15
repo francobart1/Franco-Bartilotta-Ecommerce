@@ -28,6 +28,8 @@ actualizarBadge();
 // ?agregar elemento
 
 function addToOrder(indice) {
+    
+    
     //buscar el producto por indice dentro de mi local storage
 }
 //tener la posibilidad de que cuando apriete el boton comprar se anada el elemento al array oder.products
