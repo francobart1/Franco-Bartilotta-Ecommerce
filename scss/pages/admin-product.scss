@@ -6,7 +6,8 @@
 
 .product-form {
     padding: 2rem;
-    border: 3px solid salmon;
+    background-color: $color-bg-secondary;
+    
 }
 .product-form > div {
     margin-bottom: 1rem;
@@ -16,7 +17,7 @@
     padding: .5rem 1rem;
     border: 1px solid greenyellow;
     color: white;
-    background-color: green;
+    background-color: orange;
 }
 
 .edit-btn{
@@ -79,7 +80,7 @@
 .product__info-icon.disabled{
     filter: grayscale(1);
     opacity: .5;
-    pointer-events: none; /*no escuchas ninguno de los eventos, de hover, click, etc*/
+    pointer-events: none; 
 }
 
 .product__action-btn {
@@ -105,19 +106,7 @@
     background-color: rgb(199, 1, 1);
 }
 
-/* .product__action-btn--edit { //asi es como deberia de quedar para sass
-    background-color: rgb(73, 162, 250); 
-}
-.product__action-btn--edit:hover {
-    background-color: rgb(8, 131, 255); 
-}
 
-.product__action-btn--favorite {
-    background-color: rgb(253, 247, 230); 
-}
-.product__action-btn--favorite:hover {
-    background-color: rgb(247, 217, 155); 
-} */
 
 .btn-edit {
     background-color: rgb(73, 162, 250); 
@@ -145,10 +134,3 @@
         overflow-x: auto;
     }
 }
-/* .red-bg .swal-title{ esto es por si queremos modificar algunas cosas de la ventana que salta
-    color: red
-} 
-
-.swal-modal {
-    background-color: #333;
-}  */
