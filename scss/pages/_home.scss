@@ -124,16 +124,17 @@ body {
 @media screen and (min-width: 1000px) {
     .section-cards {
         &__title-container {
-            width: 50%;
+            width:80%;
         }
         &__header {
             padding: 10px 0;
             display: flex;
             align-items: center;
+            flex-direction: column;
         }
         &__products-search-container {
             padding: 1rem;
-            width: 50%;
+            width: 100%;
         }
     }
     .cards-container {

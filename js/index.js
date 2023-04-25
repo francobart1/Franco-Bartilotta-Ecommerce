@@ -27,9 +27,7 @@ function renderizarProductos(products) {
         <button class="card__btn-container" onclick="addToOrder(${index})" ${user ? "" : "disabled"} >
         comprar
         </button>
-        <div class="card__date">
-        ${product.date}
-        </div>
+        
         <div class="card__btn-container">
             <a class="card__btn" href="/pages/product-detail/product-detail.html?id=${index}">
                 Detalle

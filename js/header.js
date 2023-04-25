@@ -13,13 +13,9 @@ if(currentUser) {
     signIn.innerHTML = `<div onclick='logout()' style="cursor: pointer;" class="navbar__nav-link">Logout</div>`
 
     const adminProductLink = createLinkElement('admin-product','Admin Product');
-    adminProductLink.innerHTML = `<li class="navbar__nav-item"><a href="/pages/admin-product/admin-product.html" class="navbar__nav-link">Admin Product</a>
-    </li>`
-
-    const adminUserLink = createLinkElement('admin-user', 'Admin User');
-    adminUserLink.innerHTML = `<li class="navbar__nav-item"><a href="/pages/user-product/user-product.html" class="navbar__nav-link">Admin User</a>
-    <li>`
     
+
+    const adminUserLink = createLinkElement('user-product', 'User Product');
     
     navbarList.appendChild(adminProductLink)
     navbarList.appendChild(adminUserLink)
@@ -28,12 +24,6 @@ if(currentUser) {
 } else {
     const link = createLinkElement('login', 'Login');
     signIn.replaceChildren(link);
-    //const link = document.createElement('a');
-    //link.classList.add('navbar__nav-link');
-    //link.href = '/pages/login/login.html';
-    //link.setAttribute('target', '_blank')
-    //signIn.innerHTML= 'login';
-    //signIn.replaceChildren(link)
 
 
 
@@ -53,16 +43,13 @@ function  createListItemElement(path, text) {
 }
 
 function  createLinkElement(path, text) {
-    //let li;
+    
     
     const link = document.createElement('a');
     link.classList.add('navbar__nav-link');
     link.href = `/pages/${path}/${path}.html`;
     link.innerHTML = text;
-    //if(type) {
-     //   li = document.createElement(type);
-     //   li.appenChild(link)
-    //}
+    
     return link;
 }
 

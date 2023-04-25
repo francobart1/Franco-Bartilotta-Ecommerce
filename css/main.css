@@ -605,16 +605,17 @@ body {
 
 @media screen and (min-width: 1000px) {
   .section-cards__title-container {
-    width: 50%;
+    width: 80%;
   }
   .section-cards__header {
     padding: 10px 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
   .section-cards__products-search-container {
     padding: 1rem;
-    width: 50%;
+    width: 100%;
   }
   .cards-container {
     margin: 0 auto;
@@ -1053,27 +1054,67 @@ iframe {
   color: #3887db;
 }
 
-.container {
+.container-product {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .product-form {
+  margin: 10px;
+  width: 300px;
+  justify-content: center;
   padding: 2rem;
-  background-color: #3887db;
-  border: 3px solid red;
+  background-color: rgb(56, 135, 219);
+  border: 5px solid orange;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-form > div {
   margin-bottom: 1rem;
 }
 
+.title-product {
+  margin-top: 50px;
+  text-align: center;
+  color: rgba(245, 159, 0, 0.863);
+  background-color: #3887db;
+}
+
 .submit-btn {
+  width: 150px;
+  justify-content: center;
+  display: flex;
   padding: 0.5rem 1rem;
-  border: 1px solid greenyellow;
+  border-radius: 20px;
   color: white;
-  background-color: green;
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.submit-btn:hover {
+  background-color: white;
+  color: orange;
+}
+
+.label-product {
+  display: flex;
+  color: white;
+}
+
+.input-product {
+  outline: none;
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .edit-btn {
@@ -1082,8 +1123,7 @@ iframe {
 }
 
 .table-container {
-  width: 100vw;
-  overflow-x: scroll;
+  display: flex;
 }
 
 .table-product {
@@ -1101,7 +1141,7 @@ iframe {
 }
 
 .table-product tr td:not(:first-child) {
-  padding: 0.5rem;
+  text-align: center;
 }
 
 .table-product tbody tr:nth-child(odd) {
@@ -1127,7 +1167,7 @@ iframe {
 }
 
 .product__price {
-  font-weight: bold;
+  width: 80px;
 }
 
 .product__info, .product__actions {
@@ -1191,10 +1231,13 @@ iframe {
 }
 
 @media screen and (min-width: 1000px) {
-  .container {
+  .container-product {
+    justify-content: space-around;
     flex-direction: row;
   }
   .table-container {
     overflow-x: auto;
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=main.css.map */

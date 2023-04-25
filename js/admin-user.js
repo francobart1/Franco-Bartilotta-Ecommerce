@@ -1,6 +1,6 @@
-
 let Products = JSON.parse(localStorage.getItem("Products")) || []; 
 
+let favorites = [];
 
 
 const productForm = document.getElementById('add-product')
@@ -38,9 +38,7 @@ function renderizarTabla(){
 
         const tableRow = `
                             <tr class="product">
-                                <td class="product__img-cell">
-                                    <img class= "product__img" src="${imageSrc}" width="120px" alt="${producto.name}">                    
-                                </td>
+                            
                                 <td class= "product__name">
                                     ${producto.name}
                                 </td>
@@ -50,14 +48,20 @@ function renderizarTabla(){
                                 <td class= "product__price">
                                     $ ${producto.price}
                                 </td>
-                                
+                                <td class= "product__info">
+                                    <span class="product__info-icon ${producto.stock ? '' : 'disabled'}" >
+                                        📦
+                                    </span>
+                                    <span class="product__info-icon ${producto.joystick ? '' : 'disabled'}" >
+                                        🎮
+                                    </span>                                    
+                                </td>
                                 <td class= "product__actions">
                                     <button class="product__action-btn" onclick="deleteProduct(${index})"> 
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                     <button class="product__action-btn btn-edit" onclick="editProduct(${index})">
                                         <i class="fa-solid fa-pencil"></i>
-                                    </button>
                                     
                                 </td>
                             </tr>`
@@ -89,13 +93,17 @@ function addProduct(evt){
         description: elements.description.value,
         price: elements.price.valueAsNumber, 
         image: elements.image.value,
+        stock: elements.stock.checked,
+        joystick: elements.joystick.checked,
+        games: elements.games.value
     };
 
     const newFormData = new FormData(evt.target);
     
     const newProductFormData = Object.fromEntries(newFormData); 
 
-
+    newProductFormData.stock = newProductFormData.stock ? true : false 
+    newProductFormData.joystick = newProductFormData.joystick ? true : false 
     newProductFormData.price = +newProductFormData.price; 
 
     console.log(newProduct)
@@ -176,7 +184,8 @@ function editProduct(id){           //?     #3
     el.description.value = product.description
     el.price.value = product.price
     el.image.value = product.image
-
+    el.stock.checked = product.stock
+    el.joystick.checked = product.joystick
     
 
     editIndex = id; 
