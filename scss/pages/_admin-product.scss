@@ -61,12 +61,13 @@
 
 .edit-btn{
     background-color: dodgerblue;
-    border-color: skyblue;
+    
 }
 
 .table-container{
     display: flex;
-    
+    border: 2px solid orange;
+    border-radius: 5px;
     
 }
 
@@ -101,12 +102,7 @@
     display: block;
     margin: 0 auto;
 }
-.product__desc {
-    width: 30%;
-}
-.product__price {
-    width: 80px;
-}
+
 .product__info, .product__actions {
     vertical-align: center;
     text-align: center;

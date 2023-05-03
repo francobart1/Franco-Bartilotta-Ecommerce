@@ -4,9 +4,11 @@ let Products = JSON.parse(localStorage.getItem("Products")) || [];
 
 
 const productForm = document.getElementById('add-product')
+console.log(productForm, 'ggasdas')
 productForm.addEventListener('click', () => {
     console.dir(productForm.dataset) 
-}) 
+});
+
 
 
 const submitBtn = document.getElementById('submit-btn') //?   #4
@@ -89,6 +91,7 @@ function addProduct(evt){
         description: elements.description.value,
         price: elements.price.valueAsNumber, 
         image: elements.image.value,
+        category: elements.categorias.value
     };
 
     const newFormData = new FormData(evt.target);

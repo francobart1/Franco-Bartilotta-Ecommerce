@@ -12,10 +12,10 @@ function renderHeaderLinks () {
 if(currentUser) {
     signIn.innerHTML = `<div onclick='logout()' style="cursor: pointer;" class="navbar__nav-link">Logout</div>`
 
-    const adminProductLink = createLinkElement('admin-product','Admin Product');
+    const adminProductLink = createListItemElement('admin-product','Admin Product');
     
 
-    const adminUserLink = createLinkElement('user-product', 'User Product');
+    const adminUserLink = createListItemElement('user-product', 'User Product');
     
     navbarList.appendChild(adminProductLink)
     navbarList.appendChild(adminUserLink)
@@ -34,7 +34,6 @@ if(currentUser) {
 function  createListItemElement(path, text) {
     const listItem = document.createElement('li');
     listItem.classList.add('navbar__nav-item');
-    listItem.setAttribute('id',)
     link = createLinkElement(path, text);
     listItem.setAttribute('id', path);
 
