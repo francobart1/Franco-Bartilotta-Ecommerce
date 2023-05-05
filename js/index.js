@@ -1,6 +1,7 @@
 const user = JSON.parse(localStorage.getItem('currentUser'));
 const cardContainer = document.querySelector('#card-container');
 
+
 const productsLS = JSON.parse(localStorage.getItem('Products')) || [];
 console.log(productsLS);
 
@@ -38,10 +39,72 @@ function renderizarProductos(products) {
             </a>
         </div>
         </div>`
+        
 
     cardContainer.appendChild(card);
 
     })
+    
+    
+}
+function addToOrder(id){
+    const product = productsLS[id];
+        
+    const newOrder = {
+        image: product.image,
+        name: product.name,
+        price: product.price,
+        cant: 1,
+        total: product.price
+        
+    }
+        
+    const prod = Order.find((prod)=>{
+        if(prod.name === product.name){
+        prod.cant = parseInt(prod.cant) + 1 ;
+        prod.total = prod.cant * parseInt(prod.price);
+        return prod;
+        }
+    })
+
+    if(!prod) {
+        Order.push(newOrder);
+    }
+
+//Guardarlo en el local storage
+localStorage.setItem('order',JSON.stringify(Order));
+
+//Alerta de Producto agregado
+showAlert('Producto agregado al carrito','exito')
+
+contarProductos();
+
+}
+function metodoFilter(evt) {
+
+    const text = evt.target.value.toLowerCase();
+
+    const filterProducts = productsLS.filter((product) => {
+        console.log(product.name)
+        const filtra = product.name.toLowerCase().includes(text.toLowerCase());
+
+        return filtra;
+
+
+    });
+    
+    renderizarProductos(filterProducts)
+    console.log(filterProducts.length)
+    const encontrar = document.getElementById('found');
+    encontrar.innerHTML = `Se encontraron ${filterProducts.length} productos.`
 }
 
 renderizarProductos(productsLS);
+
+
+
+
+
+
+
+

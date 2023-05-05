@@ -1,6 +1,5 @@
-let Products = JSON.parse(localStorage.getItem("Products")) || []; 
+let users = JSON.parse(localStorage.getItem("users")) || []; 
 
-let favorites = [];
 
 
 const productForm = document.getElementById('add-product')
@@ -24,37 +23,32 @@ function renderizarTabla(){
     
     tableBody.innerHTML = ""; 
 
-    if(Products.length === 0){
-        tableBody.innerHTML = `<tr class="disabled"><td colspan="6">NO SE ENCONTRARON PRODUCTOS</td></tr>`; 
+    if(users.length === 0){
+        tableBody.innerHTML = `<tr class="disabled"><td colspan="6">NO SE ENCONTRARON USUARIOS</td></tr>`; 
 
         return
     }
-    Products.forEach((producto, index) =>{    
+    users.forEach((user, index) =>{    
         let imageSrc = '/assets/images/no-product.png'; 
 
-        if(producto.image){ 
-            imageSrc = producto.image;       
+        if(user.image){ 
+            imageSrc = user.image;       
         }
 
         const tableRow = `
                             <tr class="product">
                             
                                 <td class= "product__name">
-                                    ${producto.name}
+                                    ${user.name}
                                 </td>
                                 <td class= "product__desc">
-                                    ${producto.description}    
+                                    ${user.email}    
                                 </td>
                                 <td class= "product__price">
-                                    $ ${producto.price}
+                                    ${user.role}
                                 </td>
-                                <td class= "product__info">
-                                    <span class="product__info-icon ${producto.stock ? '' : 'disabled'}" >
-                                        📦
-                                    </span>
-                                    <span class="product__info-icon ${producto.joystick ? '' : 'disabled'}" >
-                                        🎮
-                                    </span>                                    
+                                <td class= "product__price">
+                                    ${user.date}
                                 </td>
                                 <td class= "product__actions">
                                     <button class="product__action-btn" onclick="deleteProduct(${index})"> 
@@ -77,6 +71,22 @@ function renderizarTabla(){
 renderizarTabla()
 
 
+function formatearFecha() {
+
+    const fecha = new Date()
+
+let dia = String(fecha.getDate())
+let mes = fecha.getMonth() + 1
+
+const year = fecha.getFullYear()
+
+if(dia < 10) {
+    dia = '0' + dia;
+}
+
+
+    return `${dia}/${mes}/${year}`;
+}
 
 function addProduct(evt){
     evt.preventDefault(); 
@@ -90,32 +100,24 @@ function addProduct(evt){
 
     const newProduct = {
         name: elements.name.value,
-        description: elements.description.value,
-        price: elements.price.valueAsNumber, 
-        image: elements.image.value,
-        stock: elements.stock.checked,
-        joystick: elements.joystick.checked,
-        games: elements.games.value
+        email: elements.email.value,
+        role: elements.role.value,
+        date: formatearFecha()
     };
 
-    const newFormData = new FormData(evt.target);
     
-    const newProductFormData = Object.fromEntries(newFormData); 
 
-    newProductFormData.stock = newProductFormData.stock ? true : false 
-    newProductFormData.joystick = newProductFormData.joystick ? true : false 
-    newProductFormData.price = +newProductFormData.price; 
 
     console.log(newProduct)
 
     if(editIndex >= 0){
-        Products[editIndex] = newProduct;
+        users[editIndex] = newProduct;
         swal({
             title: `El producto se edito correctamente`,
             icon: 'info'
         })
     } else{
-        Products.push(newProduct)
+        users.push(newProduct)
 
         swal({
             title: `El producto se agrego correctamente`,
@@ -124,14 +126,14 @@ function addProduct(evt){
     }
 
     
-    localStorage.setItem("Products",  JSON.stringify(Products)) 
+    localStorage.setItem("users",  JSON.stringify(users)) 
 
     editIndex = undefined 
 
     submitBtn.classList.remove('edit-btn') 
     submitBtn.innerText = 'Cargar Producto'
 
-    console.log(Products)
+    console.log(users)
 
     renderizarTabla()
 
@@ -142,8 +144,8 @@ function addProduct(evt){
 
 function deleteProduct(id){
     swal({
-        title: `Borrar Producto`,
-        text: `Esta seguro que desea borrar el producto ${Products[id].name}`,
+        title: `Borrar usuario`,
+        text: `Esta seguro que desea borrar el usuario ${users[id].name}`,
         icon: 'warning',
         buttons: {
             cancel: `Cancelar`,
@@ -151,9 +153,9 @@ function deleteProduct(id){
         }
     }).then(value => {
         if(value === `delete`){
-            Products.splice(id, 1)
+            users.splice(id, 1)
             
-            localStorage.setItem("Products", JSON.stringify(Products));
+            localStorage.setItem("users", JSON.stringify(users));
         
             swal({
                 title: `Elemento Borrado Correctamente`,
@@ -177,15 +179,12 @@ function editProduct(id){           //?     #3
     submitBtn.classList.add('edit-btn') 
     submitBtn.innerText = 'Modificar Producto' 
 
-    let product = Products[id];
+    let user = users[id];
     console.table(product)
     const el = productForm.elements;
-    el.name.value = product.name
-    el.description.value = product.description
-    el.price.value = product.price
-    el.image.value = product.image
-    el.stock.checked = product.stock
-    el.joystick.checked = product.joystick
+    el.name.value = user.name
+    el.email.value = user.email
+    el.role.value = user.role
     
 
     editIndex = id; 

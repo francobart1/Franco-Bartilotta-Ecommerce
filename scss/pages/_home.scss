@@ -29,6 +29,8 @@ body {
         padding: 1rem;
     }
     &__title-count {
+        color: $color-bg-secondary;
+        font-weight: 600;
         font-size: 15px;
     }
     &__category {

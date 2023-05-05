@@ -2,9 +2,8 @@
 let Products = JSON.parse(localStorage.getItem("Products")) || []; 
 
 
-
 const productForm = document.getElementById('add-product')
-console.log(productForm, 'ggasdas')
+
 productForm.addEventListener('click', () => {
     console.dir(productForm.dataset) 
 });
@@ -75,7 +74,6 @@ function renderizarTabla(){
 renderizarTabla()
 
 
-
 function addProduct(evt){
     evt.preventDefault(); 
 
@@ -93,6 +91,7 @@ function addProduct(evt){
         image: elements.image.value,
         category: elements.categorias.value
     };
+    
 
     const newFormData = new FormData(evt.target);
     

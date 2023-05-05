@@ -65,6 +65,22 @@ if(userExist) {
         //return;
     //}
     
+    function formatearFecha() {
+
+        const fecha = new Date()
+    
+    let dia = String(fecha.getDate())
+    let mes = fecha.getMonth() + 1
+    
+    const year = fecha.getFullYear()
+    
+    if(dia < 10) {
+        dia = '0' + dia;
+    }
+    
+    
+        return `${dia}/${mes}/${year}`;
+    }
 
 
 
@@ -77,7 +93,8 @@ console.log('sigue')
         password: el.password.value,
         gender: el.gender.value,
         age: el.age.value,
-        role: 'USER_ROLE'
+        role: 'cliente',
+        date: formatearFecha()
     }
 
     users.push(user)
@@ -85,17 +102,13 @@ console.log('sigue')
     localStorage.setItem('users', JSON.stringify(users) ) //users ahora tiene un usuario mas
 
 
-    const alertDialog = document.createElement('div');
-    alertDialog.classList.add('alert-dialog');
-    alertDialog.innerText = 'Se agrego el usuarioio correctamente';
-    alertDialog.style.backgroundColor= 'red';
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    //insertar alerta custom
+    showAlert('registro correcto te redireccionaremos en unos instantes...')
 
-    document.querySelector('body').appendChild(alertDialog)
-
-    //registerForm.requestFullscreen();
-    setTimeout(() =>{
-        alertDialog.classList.add('hidden')
-    window.location.href = '/pages/register/register.html'}, 300000)
+    setTimeout(() => {
+        window.location.href = '/index.html';
+    }, 1500)
 
 
 
