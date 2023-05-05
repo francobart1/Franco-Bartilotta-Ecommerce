@@ -136,7 +136,7 @@ body {
         }
         &__products-search-container {
             padding: 1rem;
-            width: 100%;
+            width: 75%;
         }
     }
     .cards-container {
@@ -144,7 +144,7 @@ body {
     }
 } 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .section-cards {
         &__products-search-container {
             display: none;
